@@ -1,0 +1,27 @@
+<div class="pull-right">
+	<a href="#" (click)="toggleUsers()">Toggle Users</a>
+</div>
+<div *ngIf="showUsers">
+	<table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+		<th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <td>{{ user.name }}</td>
+        <td>{{ user.age }}</td>
+		<td>
+			<i class="fa fa-edit" (click)="editUser(i  + 1)"></i>&nbsp; &nbsp; 
+			<i class="fa fa-trash-o" style="font-size:20px" (click)="deleteUser(i + 1)"></i>
+		</td>
+      </tr>
+	  <tr *ngIf="users.length < 1">
+		  <td>No user(s) found! </td>
+	  </tr>
+    </tbody>
+  </table>
+</div>
