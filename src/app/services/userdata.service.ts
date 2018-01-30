@@ -25,6 +25,5 @@ export class UserdataService {
     return this.http.delete('http://localhost:4000/user/' + userid).map(
       res => res.json()
     )};
-  }
 
 }

@@ -9,6 +9,7 @@ import { UserComponent } from './user/user.component';
 import { NavComponent } from './nav/nav.component';
 import { AddUserComponent } from './user/add-user/add-user.component';
 import { ListUsersComponent } from './user/list-users/list-users.component';
+import { HighchartsComponent } from './highcharts/highcharts.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ListUsersComponent } from './user/list-users/list-users.component';
     UserComponent,
     NavComponent,
     AddUserComponent,
-    ListUsersComponent
+    ListUsersComponent,
+    HighchartsComponent
   ],
   imports: [
     BrowserModule,
